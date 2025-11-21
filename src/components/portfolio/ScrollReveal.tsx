@@ -19,7 +19,7 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
           if (entry.isIntersecting) {
             setTimeout(() => {
               entry.target.classList.add('revealed');
-            }, delay + 2000);
+            }, delay + 500);
           }
         });
       },

@@ -6,7 +6,7 @@ const education = [
     degree: 'Master of Computer Applications (MCA)',
     institution: 'SRM University',
     period: '2024 - 2026',
-    cgpa: '9.02',
+    cgpa: '9.04',
   },
   {
     degree: 'Bachelor of Computer Applications (BCA)',

@@ -79,9 +79,8 @@ export default function Hero() {
               </Button>
               <Button
                 size="icon"
-                variant="outline"
                 onClick={scrollToProjects}
-                className="w-12 h-12 rounded-full border-2 border-foreground text-foreground hover:bg-foreground hover:text-background"
+                className="w-12 h-12 rounded-full bg-background border-2 border-foreground text-foreground hover:bg-foreground hover:text-background"
                 aria-label="View Projects"
               >
                 <Eye className="w-5 h-5" />

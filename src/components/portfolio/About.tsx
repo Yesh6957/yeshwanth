@@ -21,7 +21,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto space-y-8">
           <ScrollReveal delay={100}>
             <p className="text-lg xl:text-xl body-text leading-relaxed">
-              I'm Yeshwanth J, a passionate MCA student at SRM University with a strong foundation in software engineering and artificial intelligence. Currently maintaining a 9.02 CGPA, I'm dedicated to building innovative solutions that make a difference.
+              I'm Yeshwanth J, a passionate MCA student at SRM University with a strong foundation in software engineering and artificial intelligence. Currently maintaining a 9.04 CGPA, I'm dedicated to building innovative solutions that make a difference.
             </p>
           </ScrollReveal>
           
