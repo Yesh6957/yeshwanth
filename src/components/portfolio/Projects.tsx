@@ -1,6 +1,4 @@
-import { useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useEffect, useRef } from 'react';
 
 const projects = [
   {
@@ -27,51 +25,54 @@ const projects = [
 ];
 
 export default function Projects() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = scrollContainerRef.current.clientWidth;
-      const newScrollPosition =
-        direction === 'left'
-          ? scrollContainerRef.current.scrollLeft - scrollAmount
-          : scrollContainerRef.current.scrollLeft + scrollAmount;
+  useEffect(() => {
+    const container = containerRef.current;
+    const track = trackRef.current;
+    if (!container || !track) return;
 
-      scrollContainerRef.current.scrollTo({
-        left: newScrollPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
+    const handleScroll = () => {
+      const rect = container.getBoundingClientRect();
+      const scrollProgress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
+      
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      track.scrollLeft = scrollProgress * maxScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section id="projects" className="py-20 xl:py-32 px-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12 xl:mb-16">
-          <h2 className="text-4xl xl:text-6xl font-normal mb-4 serif-heading uppercase tracking-wide">
-            Featured Projects
-          </h2>
-          <p className="text-lg xl:text-xl text-primary">
-            Showcasing My Most Impactful Work
-          </p>
-        </div>
+    <section id="projects" className="relative" style={{ height: '300vh' }}>
+      <div
+        ref={containerRef}
+        className="sticky top-0 h-screen flex items-center overflow-hidden"
+      >
+        <div className="container mx-auto px-4">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl xl:text-6xl font-normal serif-heading uppercase tracking-wide mb-4">
+              Featured Projects
+            </h2>
+            <p className="text-lg xl:text-xl text-primary">
+              Showcasing My Most Impactful Work
+            </p>
+          </div>
 
-        <div className="relative">
           <div
-            ref={scrollContainerRef}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-6 pb-4"
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-            }}
+            ref={trackRef}
+            className="flex gap-8 overflow-x-hidden snap-x snap-mandatory"
+            style={{ scrollBehavior: 'smooth' }}
           >
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-full xl:w-[calc(50%-12px)] snap-center"
+                className="flex-shrink-0 w-[85vw] xl:w-[45vw] snap-center"
               >
-                <div className="glass-card rounded-lg overflow-hidden h-full hover:scale-105 smooth-transition">
-                  <div className="relative h-64 xl:h-80">
+                <div className="glass-card rounded-lg overflow-hidden h-full">
+                  <div className="relative h-64 xl:h-96">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -102,43 +103,6 @@ export default function Projects() {
               </div>
             ))}
           </div>
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 xl:-translate-x-12 bg-background/80 backdrop-blur-sm border-primary hover:bg-primary hover:text-primary-foreground hidden xl:flex"
-            onClick={() => scroll('left')}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 xl:translate-x-12 bg-background/80 backdrop-blur-sm border-primary hover:bg-primary hover:text-primary-foreground hidden xl:flex"
-            onClick={() => scroll('right')}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
-        </div>
-
-        <div className="flex justify-center gap-2 mt-8">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                if (scrollContainerRef.current) {
-                  const scrollAmount = scrollContainerRef.current.clientWidth * index;
-                  scrollContainerRef.current.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth',
-                  });
-                }
-              }}
-              className="w-2 h-2 rounded-full bg-primary/30 hover:bg-primary smooth-transition"
-              aria-label={`Go to project ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>

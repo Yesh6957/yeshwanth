@@ -1,105 +1,111 @@
-import { Mail, Phone, MapPin, Linkedin, Github, BookOpen } from 'lucide-react';
+import { Mail, Phone, Facebook, Twitter, Instagram, Dribbble, Linkedin, Github, Download, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import ScrollReveal from './ScrollReveal';
 
-const contactInfo = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'yeshwanth8797@gmail.com',
-    link: 'mailto:yeshwanth8797@gmail.com',
-  },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '+91 9150957594',
-    link: 'tel:+919150957594',
-  },
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    value: 'YESHWANTH J',
-    link: 'https://linkedin.com',
-  },
-  {
-    icon: Github,
-    label: 'GitHub',
-    value: 'yesh6957',
-    link: 'https://github.com/yesh6957',
-  },
-  {
-    icon: MapPin,
-    label: 'Location',
-    value: 'Hosur, Tamil Nadu - 635109',
-    link: null,
-  },
+const socialLinks = [
+  { icon: Facebook, label: 'Facebook', link: 'https://facebook.com' },
+  { icon: Twitter, label: 'Twitter', link: 'https://twitter.com' },
+  { icon: Instagram, label: 'Instagram', link: 'https://instagram.com' },
+  { icon: Dribbble, label: 'Dribbble', link: 'https://dribbble.com' },
+  { icon: Linkedin, label: 'LinkedIn', link: 'https://linkedin.com' },
+  { icon: Github, label: 'GitHub', link: 'https://github.com/yesh6957' },
+];
+
+const contactDetails = [
+  { icon: Mail, label: 'Email', value: 'yeshwanth8797@gmail.com', link: 'mailto:yeshwanth8797@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 9150957594', link: 'tel:+919150957594' },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 xl:py-32 px-4 bg-secondary/30">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12 xl:mb-16 space-y-4">
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-              <BookOpen className="w-8 h-8 text-primary" />
+    <section id="contact" className="py-20 xl:py-32 px-4 bg-secondary/30 relative">
+      <div className="container mx-auto max-w-6xl">
+        <ScrollReveal>
+          <div className="mb-16 xl:mb-20">
+            <div className="relative">
+              <span className="absolute -top-8 left-0 text-[120px] xl:text-[200px] font-bold text-primary/5 serif-heading pointer-events-none">
+                03
+              </span>
+              <h2 className="text-5xl xl:text-7xl font-normal serif-heading mb-6 relative z-10">
+                Get In Touch.
+              </h2>
             </div>
+            <p className="text-lg xl:text-xl body-text max-w-2xl leading-relaxed">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Let's create something amazing together.
+            </p>
           </div>
-          <h2 className="text-4xl xl:text-6xl font-normal serif-heading">
-            Ready to build something amazing?
-          </h2>
-          <p className="text-lg xl:text-xl body-text">
-            I'd love to connect with you.
-          </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="space-y-4">
-          {contactInfo.map((info, index) => (
-            <div
-              key={index}
-              className="glass-card rounded-lg p-6 hover:scale-105 smooth-transition animate-fade-up"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              {info.link ? (
-                <a
-                  href={info.link}
-                  target={info.link.startsWith('http') ? '_blank' : undefined}
-                  rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-4 xl:gap-6"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-muted-foreground mb-1">{info.label}</div>
-                    <div className="text-lg font-medium body-text truncate">
-                      {info.value}
-                    </div>
-                  </div>
-                </a>
-              ) : (
-                <div className="flex items-center gap-4 xl:gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-muted-foreground mb-1">{info.label}</div>
-                    <div className="text-lg font-medium body-text">
-                      {info.value}
-                    </div>
-                  </div>
-                </div>
-              )}
+        <div className="grid xl:grid-cols-2 gap-12 xl:gap-16 mb-12">
+          <ScrollReveal delay={100}>
+            <div>
+              <h3 className="text-2xl xl:text-3xl font-normal serif-heading mb-8">
+                Follow Me
+              </h3>
+              <div className="space-y-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 group smooth-transition hover:translate-x-2"
+                  >
+                    <social.icon className="w-5 h-5 text-primary" />
+                    <span className="text-lg body-text group-hover:text-primary smooth-transition">
+                      {social.label}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
-          ))}
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <div>
+              <h3 className="text-2xl xl:text-3xl font-normal serif-heading mb-8">
+                Contact Me
+              </h3>
+              <div className="space-y-6">
+                {contactDetails.map((contact, index) => (
+                  <a
+                    key={index}
+                    href={contact.link}
+                    className="flex items-start gap-4 group"
+                  >
+                    <contact.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <div className="text-sm text-muted-foreground mb-1">{contact.label}</div>
+                      <div className="text-lg body-text group-hover:text-primary smooth-transition">
+                        {contact.value}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
 
-        <div className="mt-12 text-center space-y-4">
-          <p className="text-2xl xl:text-3xl font-normal text-primary serif-heading italic">
-            Yeshwanth J
-          </p>
-          <p className="text-muted-foreground">
-            © 2025 Yesh
-          </p>
-        </div>
+        <ScrollReveal delay={300}>
+          <div className="flex flex-col max-xl:flex-row gap-4 max-w-md">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <Send className="w-4 h-4 mr-2" />
+              Message Me
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              Get My CV
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

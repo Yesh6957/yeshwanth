@@ -7,6 +7,7 @@ import Experience from '@/components/portfolio/Experience';
 import Skills from '@/components/portfolio/Skills';
 import Projects from '@/components/portfolio/Projects';
 import Contact from '@/components/portfolio/Contact';
+import Footer from '@/components/portfolio/Footer';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 };
