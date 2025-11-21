@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="flex justify-center xl:justify-end animate-fade-in">
             <div className="relative w-full max-w-md aspect-square">
               <img
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/151bbcdb-2cc5-4e79-b319-32f9c9757509.jpg"
+                src="https://miaoda-conversation-file.s3cdn.medo.dev/user-7pjhlc6jdt6o/conv-7pjii8138kcg/20251122/file-7pqmipac0buo.jpg"
                 alt="Yeshwanth J"
                 className="w-full h-full object-cover"
               />
