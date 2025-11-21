@@ -19,13 +19,13 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
           if (entry.isIntersecting) {
             setTimeout(() => {
               entry.target.classList.add('revealed');
-            }, delay);
+            }, delay + 2000);
           }
         });
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
+        rootMargin: '0px 0px -100px 0px',
       }
     );
 
