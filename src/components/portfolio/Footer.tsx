@@ -1,5 +1,4 @@
-import { ArrowUp, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 
 const socialIcons = [
   { icon: Facebook, link: 'https://facebook.com', label: 'Facebook' },
@@ -10,16 +9,12 @@ const socialIcons = [
 ];
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="fixed bottom-0 left-0 right-0 z-40 glass-footer">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col xl:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-6">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/70">
               © 2025 Yesh. All rights reserved.
             </p>
             <div className="flex items-center gap-3">
@@ -29,7 +24,7 @@ export default function Footer() {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary smooth-transition"
+                  className="text-white/70 hover:text-white smooth-transition"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 h-4" />
@@ -39,18 +34,9 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/70">
               Designed & Built by Yeshwanth J
             </p>
-            <Button
-              size="icon"
-              variant="outline"
-              className="rounded-full border-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={scrollToTop}
-              aria-label="Scroll to top"
-            >
-              <ArrowUp className="w-4 h-4" />
-            </Button>
           </div>
         </div>
       </div>

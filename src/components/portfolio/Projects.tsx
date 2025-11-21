@@ -46,17 +46,17 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="relative" style={{ height: '300vh' }}>
+    <section id="projects" className="relative bg-background" style={{ height: '300vh' }}>
       <div
         ref={containerRef}
-        className="sticky top-0 h-screen flex items-center overflow-hidden"
+        className="sticky top-0 h-screen flex items-center overflow-hidden bg-background"
       >
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl xl:text-6xl font-normal serif-heading uppercase tracking-wide mb-4">
+            <h2 className="text-4xl xl:text-6xl font-normal serif-heading mb-4">
               Featured Projects
             </h2>
-            <p className="text-lg xl:text-xl text-primary">
+            <p className="text-lg xl:text-xl text-muted-foreground">
               Showcasing My Most Impactful Work
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Projects() {
                 key={index}
                 className="flex-shrink-0 w-[85vw] xl:w-[45vw] snap-center"
               >
-                <div className="glass-card rounded-lg overflow-hidden h-full">
+                <div className="border border-border overflow-hidden h-full hover:shadow-lg smooth-transition bg-background">
                   <div className="relative h-64 xl:h-96">
                     <img
                       src={project.image}
@@ -92,7 +92,7 @@ export default function Projects() {
                       {project.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                          className="px-3 py-1 bg-foreground text-background text-sm font-medium"
                         >
                           {tech}
                         </span>

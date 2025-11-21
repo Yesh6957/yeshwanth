@@ -8,10 +8,11 @@ import Skills from '@/components/portfolio/Skills';
 import Projects from '@/components/portfolio/Projects';
 import Contact from '@/components/portfolio/Contact';
 import Footer from '@/components/portfolio/Footer';
+import ScrollToTop from '@/components/portfolio/ScrollToTop';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-24">
       <Header />
       <Hero />
       <About />
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <Projects />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

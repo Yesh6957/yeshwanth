@@ -36,10 +36,10 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 xl:py-32 px-4">
+    <section id="experience" className="py-20 xl:py-32 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
-          <h2 className="text-4xl xl:text-6xl font-normal text-center mb-12 xl:mb-16 serif-heading uppercase tracking-wide">
+          <h2 className="text-4xl xl:text-6xl font-normal text-center mb-12 xl:mb-16 serif-heading">
             Experience
           </h2>
         </ScrollReveal>
@@ -47,11 +47,11 @@ export default function Experience() {
         <div className="max-w-5xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
             <ScrollReveal key={index} delay={index * 100}>
-              <div className="glass-card rounded-lg p-6 xl:p-8 hover:scale-105 smooth-transition">
+              <div className="border border-border p-6 xl:p-8 hover:shadow-lg smooth-transition">
                 <div className="flex flex-col xl:flex-row gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Briefcase className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 rounded-full bg-foreground/5 flex items-center justify-center">
+                      <Briefcase className="w-8 h-8 text-foreground" />
                     </div>
                   </div>
 
@@ -72,7 +72,7 @@ export default function Experience() {
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <span className="text-primary mt-1.5">•</span>
+                          <span className="text-foreground mt-1.5">•</span>
                           <span className="body-text">{achievement}</span>
                         </li>
                       ))}

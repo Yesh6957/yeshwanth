@@ -10,10 +10,10 @@ const strengths = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 xl:py-32 px-4">
+    <section id="about" className="py-20 xl:py-32 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
-          <h2 className="text-4xl xl:text-6xl font-normal text-center mb-12 xl:mb-16 serif-heading uppercase tracking-wide">
+          <h2 className="text-4xl xl:text-6xl font-normal text-center mb-12 xl:mb-16 serif-heading">
             About Me
           </h2>
         </ScrollReveal>
@@ -42,9 +42,9 @@ export default function About() {
               {strengths.map((strength, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center gap-3 p-6 glass-card rounded-lg hover:scale-105 smooth-transition"
+                  className="flex flex-col items-center gap-3 p-6 border border-border hover:shadow-lg smooth-transition"
                 >
-                  <strength.icon className="w-8 h-8 text-primary flex-shrink-0" />
+                  <strength.icon className="w-8 h-8 text-foreground flex-shrink-0" />
                   <span className="text-sm font-medium text-center body-text">{strength.text}</span>
                 </div>
               ))}

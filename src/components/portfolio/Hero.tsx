@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Mail, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const roles = ["a Photographer", "a Developer", "an AI Enthusiast"];
@@ -48,7 +49,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-4">
+    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="grid xl:grid-cols-[1fr,400px] gap-12 xl:gap-20 items-center">
           <div className="space-y-6 xl:space-y-8 animate-fade-up">
@@ -57,7 +58,7 @@ export default function Hero() {
                 I'm Yesh
               </h1>
               <div className="h-12 xl:h-16">
-                <p className="text-2xl xl:text-4xl font-normal text-primary">
+                <p className="text-2xl xl:text-4xl font-normal text-foreground">
                   I'm {displayText}
                   <span className="animate-pulse">|</span>
                 </p>
@@ -67,31 +68,33 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col max-xl:flex-row gap-4 pt-4">
+            <div className="flex items-center gap-4 pt-4">
               <Button
-                size="lg"
+                size="icon"
                 onClick={scrollToContact}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="w-12 h-12 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                aria-label="Contact Me"
               >
-                Contact Me
+                <Mail className="w-5 h-5" />
               </Button>
               <Button
-                size="lg"
+                size="icon"
                 variant="outline"
                 onClick={scrollToProjects}
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="w-12 h-12 rounded-full border-2 border-foreground text-foreground hover:bg-foreground hover:text-background"
+                aria-label="View Projects"
               >
-                View Projects
+                <Eye className="w-5 h-5" />
               </Button>
             </div>
           </div>
 
           <div className="flex justify-center xl:justify-end animate-fade-in">
-            <div className="glass-card rounded-lg p-2 w-full max-w-md aspect-square flex items-center justify-center">
+            <div className="relative w-full max-w-md aspect-square">
               <img
                 src="https://miaoda-site-img.s3cdn.medo.dev/images/151bbcdb-2cc5-4e79-b319-32f9c9757509.jpg"
                 alt="Yeshwanth J"
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
