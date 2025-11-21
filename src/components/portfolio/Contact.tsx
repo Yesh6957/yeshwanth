@@ -39,14 +39,14 @@ export default function Contact() {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12 xl:mb-16 space-y-4">
           <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
-              <BookOpen className="w-8 h-8 text-accent" />
+            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+              <BookOpen className="w-8 h-8 text-primary" />
             </div>
           </div>
-          <h2 className="text-3xl xl:text-5xl font-bold text-primary font-serif">
+          <h2 className="text-4xl xl:text-6xl font-normal serif-heading">
             Ready to build something amazing?
           </h2>
-          <p className="text-lg xl:text-xl text-muted-foreground">
+          <p className="text-lg xl:text-xl body-text">
             I'd love to connect with you.
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function Contact() {
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="glass-card rounded-xl p-6 hover:scale-105 smooth-transition animate-fade-up"
+              className="glass-card rounded-lg p-6 hover:scale-105 smooth-transition animate-fade-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               {info.link ? (
@@ -65,24 +65,24 @@ export default function Contact() {
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="flex items-center gap-4 xl:gap-6"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-accent" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <info.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-sm text-muted-foreground mb-1">{info.label}</div>
-                    <div className="text-lg font-medium text-foreground truncate">
+                    <div className="text-lg font-medium body-text truncate">
                       {info.value}
                     </div>
                   </div>
                 </a>
               ) : (
                 <div className="flex items-center gap-4 xl:gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-accent" />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <info.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-sm text-muted-foreground mb-1">{info.label}</div>
-                    <div className="text-lg font-medium text-foreground">
+                    <div className="text-lg font-medium body-text">
                       {info.value}
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-12 text-center space-y-4">
-          <p className="text-2xl xl:text-3xl font-bold text-accent italic">
+          <p className="text-2xl xl:text-3xl font-normal text-primary serif-heading italic">
             Yeshwanth J
           </p>
           <p className="text-muted-foreground">

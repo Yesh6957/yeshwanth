@@ -36,8 +36,8 @@ const experiences = [
 export default function Experience() {
   return (
     <section id="experience" className="py-20 xl:py-32 px-4">
-      <div className="container mx-auto">
-        <h2 className="text-3xl xl:text-5xl font-bold text-center mb-12 xl:mb-16 text-primary">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl xl:text-6xl font-normal text-center mb-12 xl:mb-16 serif-heading uppercase tracking-wide">
           Experience
         </h2>
 
@@ -45,22 +45,22 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="glass-card rounded-xl p-6 xl:p-8 hover:scale-105 smooth-transition animate-fade-up"
+              className="glass-card rounded-lg p-6 xl:p-8 hover:scale-105 smooth-transition animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex flex-col xl:flex-row gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Briefcase className="w-8 h-8 text-accent" />
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Briefcase className="w-8 h-8 text-primary" />
                   </div>
                 </div>
 
                 <div className="flex-1 space-y-4">
                   <div>
-                    <h3 className="text-xl xl:text-2xl font-bold text-primary mb-2">
+                    <h3 className="text-xl xl:text-2xl font-normal serif-heading mb-2">
                       {exp.title}
                     </h3>
-                    <p className="text-lg text-foreground font-medium mb-2">
+                    <p className="text-lg body-text font-medium mb-2">
                       {exp.company}
                     </p>
                     <div className="flex items-center gap-2 text-muted-foreground">
@@ -72,8 +72,8 @@ export default function Experience() {
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <span className="text-accent mt-1.5">•</span>
-                        <span className="text-foreground">{achievement}</span>
+                        <span className="text-primary mt-1.5">•</span>
+                        <span className="body-text">{achievement}</span>
                       </li>
                     ))}
                   </ul>

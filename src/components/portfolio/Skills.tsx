@@ -1,65 +1,69 @@
-import { Code, Globe, Database, Wrench } from 'lucide-react';
-
-const skillCategories = [
-  {
-    title: 'Programming Languages',
-    icon: Code,
-    skills: ['Python', 'C', 'C++', 'Java', 'JavaScript', 'PHP'],
-  },
-  {
-    title: 'Web Technologies',
-    icon: Globe,
-    skills: ['HTML', 'CSS', 'React', 'Node.js', 'Bootstrap'],
-  },
-  {
-    title: 'Frameworks',
-    icon: Wrench,
-    skills: ['Django', 'Flask', 'Express.js'],
-  },
-  {
-    title: 'Databases & Tools',
-    icon: Database,
-    skills: ['MySQL', 'Firebase', 'Git', 'GitHub', 'VS Code', 'Android Studio', 'Postman'],
-  },
+const skills = [
+  'Python',
+  'JavaScript',
+  'React',
+  'Node.js',
+  'TypeScript',
+  'Django',
+  'Flask',
+  'Express.js',
+  'MySQL',
+  'Firebase',
+  'Git',
+  'HTML',
+  'CSS',
+  'C++',
+  'Java',
+  'PHP',
+  'Bootstrap',
+  'Android Studio',
+  'VS Code',
+  'Postman',
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 xl:py-32 px-4 bg-secondary/30">
-      <div className="container mx-auto">
-        <h2 className="text-3xl xl:text-5xl font-bold text-center mb-12 xl:mb-16 text-primary">
-          Skills
+    <section id="skills" className="py-20 xl:py-32 px-4 bg-secondary/30 overflow-hidden">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl xl:text-6xl font-normal text-center mb-12 xl:mb-16 serif-heading uppercase tracking-wide">
+          Skills & Technologies
         </h2>
 
-        <div className="grid xl:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="glass-card rounded-xl p-6 xl:p-8 hover:scale-105 smooth-transition animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                  <category.icon className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="text-xl xl:text-2xl font-bold text-primary">
-                  {category.title}
-                </h3>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className="px-4 py-2 bg-secondary rounded-lg text-foreground font-medium hover:bg-accent hover:text-accent-foreground smooth-transition"
-                  >
+        <div className="relative">
+          <div className="flex overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...skills, ...skills].map((skill, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="mx-4 px-8 py-4 glass-card rounded-lg inline-block"
+                >
+                  <span className="text-lg xl:text-xl font-medium body-text">
                     {skill}
                   </span>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          ))}
+            <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
+              {[...skills, ...skills].map((skill, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="mx-4 px-8 py-4 glass-card rounded-lg inline-block"
+                >
+                  <span className="text-lg xl:text-xl font-medium body-text">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent pointer-events-none" />
         </div>
+
+        <p className="text-center text-muted-foreground mt-8 text-sm">
+          Hover to pause
+        </p>
       </div>
     </section>
   );

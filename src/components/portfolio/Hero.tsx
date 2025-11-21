@@ -49,29 +49,29 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-4">
-      <div className="container mx-auto">
-        <div className="grid xl:grid-cols-2 gap-12 xl:gap-16 items-center">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid xl:grid-cols-[1fr,400px] gap-12 xl:gap-20 items-center">
           <div className="space-y-6 xl:space-y-8 animate-fade-up">
             <div className="space-y-4">
-              <h1 className="text-4xl xl:text-6xl font-bold text-primary">
+              <h1 className="text-5xl xl:text-7xl font-normal serif-heading">
                 I'm Yesh
               </h1>
               <div className="h-12 xl:h-16">
-                <p className="text-2xl xl:text-4xl font-semibold text-accent">
+                <p className="text-2xl xl:text-4xl font-normal text-primary">
                   I'm {displayText}
                   <span className="animate-pulse">|</span>
                 </p>
               </div>
-              <p className="text-lg xl:text-xl text-muted-foreground max-w-xl">
+              <p className="text-lg xl:text-xl body-text max-w-xl">
                 MCA Student | Full-Stack Developer | AI/ML Enthusiast
               </p>
             </div>
 
-            <div className="flex flex-col max-xl:flex-row gap-4">
+            <div className="flex flex-col max-xl:flex-row gap-4 pt-4">
               <Button
                 size="lg"
                 onClick={scrollToContact}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 Contact Me
               </Button>
@@ -79,7 +79,7 @@ export default function Hero() {
                 size="lg"
                 variant="outline"
                 onClick={scrollToProjects}
-                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
                 View Projects
               </Button>
@@ -87,11 +87,11 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center xl:justify-end animate-fade-in">
-            <div className="glass-card rounded-2xl p-2 w-full max-w-md aspect-square flex items-center justify-center">
+            <div className="glass-card rounded-lg p-2 w-full max-w-md aspect-square flex items-center justify-center">
               <img
                 src="https://miaoda-site-img.s3cdn.medo.dev/images/151bbcdb-2cc5-4e79-b319-32f9c9757509.jpg"
                 alt="Yeshwanth J"
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-md"
               />
             </div>
           </div>
