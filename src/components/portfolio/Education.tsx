@@ -3,16 +3,16 @@ import ScrollReveal from './ScrollReveal';
 
 const education = [
   {
-    degree: 'Master of Computer Applications (MCA)',
-    institution: 'SRM University',
+    degree: 'Master of Computer Applications (MCA) cgpa: 9.04',
+    institution: 'SRM Institute Of Science And Techology - Trichy, SRM University',
     period: '2024 - 2026',
-    cgpa: '9.04',
+    
   },
   {
-    degree: 'Bachelor of Computer Applications (BCA)',
-    institution: 'Bangalore University',
+    degree: 'Bachelor of Computer Applications (BCA) cgpa: 7.21',
+    institution: 'St. Francis De Sales College - Bengaluru, Bangalore University',
     period: '2020 - 2023',
-    cgpa: '7.21',
+    
   },
 ];
 
@@ -47,16 +47,7 @@ export default function Education() {
                     <p className="text-muted-foreground">{edu.period}</p>
                   </div>
 
-                  <div className="flex-shrink-0">
-                    <div className="bg-foreground text-background px-6 py-3 min-w-[100px]">
-                      <div className="text-center">
-                        <div className="text-2xl xl:text-3xl font-normal serif-heading leading-tight">
-                          {edu.cgpa}
-                        </div>
-                        <div className="text-xs mt-1 uppercase tracking-wider">CGPA</div>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </ScrollReveal>

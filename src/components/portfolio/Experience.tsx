@@ -4,7 +4,7 @@ import ScrollReveal from './ScrollReveal';
 const experiences = [
   {
     title: 'AI Tech Decentralized Intern',
-    company: 'BlockesBlock',
+    company: 'BlockesBlock, Online',
     period: 'Aug 2025 - Sep 2025',
     achievements: [
       'Optimized LLM components resulting in 10% faster response times',

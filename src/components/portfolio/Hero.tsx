@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Mail, Eye } from 'lucide-react';
+import { Mail, Eye, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ResumePDF from './yesh resume.pdf';
 
 const roles = ["a Photographer", "a Developer", "an AI Enthusiast"];
 
@@ -81,12 +82,12 @@ export default function Hero() {
                 <Mail className="w-5 h-5" />
               </Button>
               <a
-                href="#"
-                download
-                className="w-12 h-12 rounded-full bg-background border-2 border-foreground text-foreground hover:bg-foreground hover:text-background flex items-center justify-center smooth-transition"
-                aria-label="My Resume"
+                href={ResumePDF}
+                download="Yesh_Resume.pdf"
+                className="editorial-button-outline text-center"
               >
-                <Eye className="w-5 h-5" />
+                <Download className="w-4 h-4 inline-block mr-2" />
+                Download My Resume
               </a>
             </div>
           </div>

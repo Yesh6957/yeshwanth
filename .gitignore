@@ -1,3 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+output/
+.vite_cache/
+
+# Env
+.env
+*.local
+
 # Logs
 logs
 *.log
@@ -7,23 +20,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-output
-*.local
-package-lock.json
-
-# Editor directories and files
+# IDE stuff
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# OS trash
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-.sync
+Thumbs.db
+
+# Image build output
+public/images/optimized/
+
+# History
 history/*.json
-.vite_cache

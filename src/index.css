@@ -162,6 +162,40 @@ All colors MUST be HSL.
     background: hsl(var(--foreground));
     color: hsl(var(--background));
   }
+
+  /* Photography marquee optimized */
+.photography-marquee { overflow: hidden; }
+.photography-track {
+  display: flex;
+  gap: 24px;
+  padding: 12px 8px;
+  animation: marquee-linear 20s linear infinite;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+.photography-item { flex: 0 0 260px; }
+
+/* pause on hover (useful for accessibility) */
+.photography-track:hover { animation-play-state: paused; }
+
+@keyframes marquee-linear {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); } /* duplicated content moves half */
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .photography-item { flex: 0 0 200px; }
+  .photography-track { gap: 16px; animation-duration: 16s; }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .photography-track { animation: none; }
+}
+
+/* minor image performance */
+.photography-item img { display:block; width:100%; height:100%; object-fit:cover; }
 }
 
 html {

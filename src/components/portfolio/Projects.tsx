@@ -6,21 +6,21 @@ const projects = [
     description: 'Secure food ordering platform with real-time tracking and optimized database queries. Achieved 25% query time reduction through strategic indexing.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/79e92474-253a-4ec2-9ccc-79500050ac5b.jpg',
-    link: '#',
+    link: 'https://github.com/Yesh6957/Ai-quote-generator',
   },
   {
     title: 'Books Buy & Rent Application',
     description: 'Android application featuring Firebase authentication, real-time database updates, and seamless book browsing experience.',
     technologies: ['Java', 'XML', 'Firebase', 'Android Studio'],
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/e9a6e9dd-ad15-4d7d-8ded-2ba6a6b219af.jpg',
-    link: '#',
+    link: 'https://github.com/Yesh6957/Book-store',
   },
   {
     title: 'Payani Maga - AI Travel Itinerary Agent',
     description: 'AI-powered travel planner with personalized itineraries, budgeting tools, real-time chat, and safety alerts. Integrated with OpenAI GPT, weather APIs, and Google Maps.',
     technologies: ['React', 'FastAPI', 'Python', 'Ollama-llama3', 'OpenAI GPT'],
     image: 'https://miaoda-site-img.s3cdn.medo.dev/images/8ad9e321-c990-40d1-bc01-3a21a94032e8.jpg',
-    link: '#',
+    link: 'https://github.com/AVEEJG/payani-maga',
   },
 ];
 

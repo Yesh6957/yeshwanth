@@ -1,12 +1,12 @@
 import ScrollReveal from './ScrollReveal';
 
 const certificates = [
-  { name: 'Python for Data Science', authority: 'NPTEL', link: '#' },
-  { name: 'AWS Academy Cloud Foundations', authority: 'AWS Academy', link: '#' },
-  { name: '5-DAY WEB DESIGNING & DEVELOPMENT Internship', authority: 'Prompt Infotech', link: '#' },
-  { name: 'MongoDB Basic', authority: 'Great Learning', link: '#' },
-  { name: 'Database Management System', authority: 'Great Learning', link: '#' },
-  { name: 'TALLY ERP 9', authority: 'SFS College', link: '#' },
+  { name: 'Python for Data Science', authority: 'NPTEL', link: 'https://drive.google.com/file/d/1PN8m3vgyTKMnuQQ_e0C5MUT2c-HU_byh/view?usp=drivesdk' },
+  { name: 'AWS Academy Cloud Foundations', authority: 'AWS Academy', link: 'https://drive.google.com/file/d/1IEs9B3NDp4uzoTc7F3uCD4Zbt4DGQM_B/view?usp=drivesdk' },
+  { name: '5-DAY WEB DESIGNING & DEVELOPMENT Internship', authority: 'Prompt Infotech', link: 'https://drive.google.com/file/d/1OM0r9Ie5j0Cm4hOYH388o6XDA5eb8OjM/view?usp=drivesdk' },
+  { name: 'MongoDB Basic', authority: 'Great Learning', link: 'https://drive.google.com/file/d/1jDwGhFi2O8Dj3nqaszJczr2E1MtfNIcU/view?usp=drivesdk' },
+  { name: 'Database Management System', authority: 'Great Learning', link: 'https://drive.google.com/file/d/1_MPdw88PM-dw2s-Qy4R1qV8ZRcX-9N4C/view?usp=drivesdk' },
+  { name: 'TALLY ERP 9', authority: 'SFS College', link: 'https://drive.google.com/file/d/1bVYmxBGDPMUP8XASeVx4FGppE9UPqJVd/view?usp=drivesdk' },
 ];
 
 export default function Certificates() {

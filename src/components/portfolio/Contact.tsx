@@ -1,9 +1,10 @@
 import { Mail, Phone, Linkedin, Github, Download, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
+import ResumePDF from './yesh resume.pdf';
 
 const socialLinks = [
-  { icon: Linkedin, label: 'LinkedIn', link: 'https://linkedin.com' },
+  { icon: Linkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/yeshwanth06' },
   { icon: Github, label: 'GitHub', link: 'https://github.com/yesh6957' },
 ];
 
@@ -88,8 +89,8 @@ export default function Contact() {
               Message Me
             </a>
             <a
-              href="#"
-              download
+              href={ResumePDF}
+              download="Yesh_Resume.pdf"
               className="editorial-button-outline text-center"
             >
               <Download className="w-4 h-4 inline-block mr-2" />

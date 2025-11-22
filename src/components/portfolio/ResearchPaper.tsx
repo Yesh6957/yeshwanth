@@ -22,18 +22,29 @@ export default function ResearchPaper() {
                     A Hybrid Movie Recommender Enhanced by Conversational AI and Online Knowledge Retrieval
                   </h3>
                   
-                  <p className="text-lg body-text leading-relaxed italic text-foreground/80" style={{ fontFamily: "'Playfair Display', serif" }}>
-                    "This article presents a hybrid movie recommender system that integrates collaborative filtering, content-based filtering, conversational AI, and dynamic online information retrieval. Our hybrid system enables interactive multi-turn conversations with users to understand their preferences and, at the same time, it fetches the most up-to-date, relevant, and dynamic information about movies from various online sources."
+                  <p
+                    className="text-lg body-text leading-relaxed italic text-foreground/80"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    "This article presents a hybrid movie recommender system that integrates collaborative filtering,
+                    content-based filtering, conversational AI, and dynamic online information retrieval. Our hybrid 
+                    system enables interactive multi-turn conversations with users to understand their preferences and,
+                    at the same time, it fetches the most up-to-date, relevant, and dynamic information about movies
+                    from various online sources."
                   </p>
                 </div>
 
+                {/* RIGHT SIDE — IMAGE CONTAINER */}
                 <div className="flex items-center justify-center">
-                  <div className="w-full aspect-square border-2 border-border bg-muted flex items-center justify-center">
-                    <span className="text-lg text-muted-foreground font-light tracking-wider">
-                      RESEARCH DIAGRAM
-                    </span>
+                  <div className="w-full aspect-square border-2 border-border bg-muted flex items-center justify-center overflow-hidden">
+                    <img
+                      src="https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/reserach%20paper.jpg"
+                      alt="Research Diagram"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
+
               </div>
             </div>
           </ScrollReveal>
