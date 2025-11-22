@@ -54,6 +54,9 @@ export default function Hero() {
         <div className="grid xl:grid-cols-[1fr,400px] gap-12 xl:gap-20 items-center">
           <div className="space-y-6 xl:space-y-8 animate-fade-up">
             <div className="space-y-4">
+              <p className="text-xl xl:text-2xl font-light italic text-foreground/70" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Ciao,
+              </p>
               <h1 className="text-5xl xl:text-7xl font-normal serif-heading">
                 I'm Yesh
               </h1>
@@ -77,14 +80,14 @@ export default function Hero() {
               >
                 <Mail className="w-5 h-5" />
               </Button>
-              <Button
-                size="icon"
-                onClick={scrollToProjects}
-                className="w-12 h-12 rounded-full bg-background border-2 border-foreground text-foreground hover:bg-foreground hover:text-background"
-                aria-label="View Projects"
+              <a
+                href="#"
+                download
+                className="w-12 h-12 rounded-full bg-background border-2 border-foreground text-foreground hover:bg-foreground hover:text-background flex items-center justify-center smooth-transition"
+                aria-label="My Resume"
               >
                 <Eye className="w-5 h-5" />
-              </Button>
+              </a>
             </div>
           </div>
 

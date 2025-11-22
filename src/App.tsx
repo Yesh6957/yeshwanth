@@ -6,8 +6,11 @@ import Education from '@/components/portfolio/Education';
 import Experience from '@/components/portfolio/Experience';
 import Skills from '@/components/portfolio/Skills';
 import Projects from '@/components/portfolio/Projects';
+import Certificates from '@/components/portfolio/Certificates';
+import ResearchPaper from '@/components/portfolio/ResearchPaper';
+import Photography from '@/components/portfolio/Photography';
 import Contact from '@/components/portfolio/Contact';
-import Footer from '@/components/portfolio/Footer';
+import Footer from '@/components/common/Footer';
 import ScrollToTop from '@/components/portfolio/ScrollToTop';
 
 const App: React.FC = () => {
@@ -20,6 +23,9 @@ const App: React.FC = () => {
       <Experience />
       <Skills />
       <Projects />
+      <Certificates />
+      <ResearchPaper />
+      <Photography />
       <Contact />
       <Footer />
       <ScrollToTop />

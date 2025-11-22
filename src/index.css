@@ -105,6 +105,13 @@ All colors MUST be HSL.
     border-top: 1px solid hsl(0 0% 100% / 0.1);
   }
 
+  .footer-gradient-blur {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7));
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    border-top: 1px solid hsl(0 0% 100% / 0.1);
+  }
+
   .smooth-transition {
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }

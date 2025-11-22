@@ -80,14 +80,21 @@ export default function Contact() {
 
         <ScrollReveal delay={300}>
           <div className="flex flex-col max-xl:flex-row gap-4 max-w-md">
-            <button className="editorial-button">
+            <a
+              href="mailto:yeshwanth8797@gmail.com"
+              className="editorial-button text-center"
+            >
               <Send className="w-4 h-4 inline-block mr-2" />
               Message Me
-            </button>
-            <button className="editorial-button-outline">
+            </a>
+            <a
+              href="#"
+              download
+              className="editorial-button-outline text-center"
+            >
               <Download className="w-4 h-4 inline-block mr-2" />
               Download My Resume
-            </button>
+            </a>
           </div>
         </ScrollReveal>
       </div>
