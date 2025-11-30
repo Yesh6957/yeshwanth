@@ -1,12 +1,12 @@
 import ScrollReveal from './ScrollReveal';
 
 const certificates = [
-  { name: 'Python for Data Science', authority: 'NPTEL', link: 'https://drive.google.com/file/d/1PN8m3vgyTKMnuQQ_e0C5MUT2c-HU_byh/view?usp=drivesdk' },
-  { name: 'AWS Academy Cloud Foundations', authority: 'AWS Academy', link: 'https://drive.google.com/file/d/1IEs9B3NDp4uzoTc7F3uCD4Zbt4DGQM_B/view?usp=drivesdk' },
-  { name: '5-DAY WEB DESIGNING & DEVELOPMENT Internship', authority: 'Prompt Infotech', link: 'https://drive.google.com/file/d/1OM0r9Ie5j0Cm4hOYH388o6XDA5eb8OjM/view?usp=drivesdk' },
-  { name: 'MongoDB Basic', authority: 'Great Learning', link: 'https://drive.google.com/file/d/1jDwGhFi2O8Dj3nqaszJczr2E1MtfNIcU/view?usp=drivesdk' },
-  { name: 'Database Management System', authority: 'Great Learning', link: 'https://drive.google.com/file/d/1_MPdw88PM-dw2s-Qy4R1qV8ZRcX-9N4C/view?usp=drivesdk' },
-  { name: 'TALLY ERP 9', authority: 'SFS College', link: 'https://drive.google.com/file/d/1bVYmxBGDPMUP8XASeVx4FGppE9UPqJVd/view?usp=drivesdk' },
+  { name: 'Python for Data Science', authority: 'NPTEL', link: 'https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/Python%20for%20Data%20Science_page-0001.jpg' },
+  { name: 'AWS Academy Cloud Foundations', authority: 'AWS Academy', link: 'https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/AWS%20Academy%20Cloud%20Foundations_page-0001.jpg' },
+  { name: '5-DAY WEB DESIGNING & DEVELOPMENT Internship', authority: 'Prompt Infotech', link: 'https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/Prompt%20Infotech%20-%20Web%20Designing%20%26%20Development%20Internship%20Certificate_page-0001.jpg' },
+  { name: 'MongoDB Basic', authority: 'Great Learning', link: 'https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/mongodb%20tutorial_page-0001.jpg' },
+  { name: 'Database Management System', authority: 'Great Learning', link: 'https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/dbms_page-0001.jpg' },
+  { name: 'TALLY ERP 9', authority: 'SFS College', link: 'https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/TALLY%20certificate_page-0001.jpg' },
 ];
 
 export default function Certificates() {

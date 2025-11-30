@@ -6,7 +6,7 @@ const skills = [
   'TypeScript',
   'Django',
   'Flask',
-  'Express.js',
+  'node.js',
   'MySQL',
   'Firebase',
   'Git',

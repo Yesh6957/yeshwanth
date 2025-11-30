@@ -1,5 +1,4 @@
 import { Mail, Phone, Linkedin, Github, Download, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
 import ResumePDF from './yesh resume.pdf';
 

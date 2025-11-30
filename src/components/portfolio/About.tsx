@@ -2,9 +2,9 @@ import { Code2, Lightbulb, Rocket, Users } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const strengths = [
-  { icon: Code2, text: 'Full-Stack Development' },
-  { icon: Lightbulb, text: 'AI/ML Innovation' },
-  { icon: Rocket, text: 'Problem Solving' },
+  { icon: Code2, text: 'Software Developer' },
+  { icon: Lightbulb, text: 'AI/ML Enthusiast' },
+  { icon: Rocket, text: 'Problem Solver' },
   { icon: Users, text: 'Team Collaboration' },
 ];
 

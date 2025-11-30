@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Mail, Eye, Download } from 'lucide-react';
+import { Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ResumePDF from './yesh resume.pdf';
 
@@ -42,13 +42,6 @@ export default function Hero() {
     }
   };
 
-  const scrollToProjects = () => {
-    const element = document.querySelector('#projects');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
@@ -68,7 +61,7 @@ export default function Hero() {
                 </p>
               </div>
               <p className="text-lg xl:text-xl body-text max-w-xl">
-                MCA Student | Full-Stack Developer | AI/ML Enthusiast
+                MCA Graduate | Full-Stack Developer | AI/ML Developer
               </p>
             </div>
 
@@ -95,7 +88,7 @@ export default function Hero() {
           <div className="flex justify-center xl:justify-end animate-fade-in">
             <div className="relative w-full max-w-md aspect-square">
               <img
-                src="https://miaoda-conversation-file.s3cdn.medo.dev/user-7pjhlc6jdt6o/conv-7pjii8138kcg/20251122/file-7pqmipac0buo.jpg"
+                src="https://raw.githubusercontent.com/Yesh6957/images/refs/heads/main/profile.jpg"
                 alt="Yeshwanth J"
                 className="w-full h-full object-cover"
               />

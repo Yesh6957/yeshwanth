@@ -12,16 +12,16 @@ const Header: React.FC = () => {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link to="http://github.com/Yesh6957/images/blob/main/main.png?raw=true" className="flex-shrink-0 flex items-center">
               {/* Please replace with your website logo */}
               <img
                 className="h-8 w-auto"
-                src={`https://miaoda-site-img.cdn.bcebos.com/placeholder/code_logo_default.png`}
+                src={`http://github.com/Yesh6957/images/blob/main/main.png?raw=true`}
                 alt="Website logo"
               />
               {/* Please replace with your website name */}
               <span className="ml-2 text-xl font-bold text-blue-600">
-                Website Name
+                Yesh portfoilio
               </span>
             </Link>
           </div>

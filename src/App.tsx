@@ -12,10 +12,12 @@ import Photography from '@/components/portfolio/Photography';
 import Contact from '@/components/portfolio/Contact';
 import Footer from '@/components/common/Footer';
 import ScrollToTop from '@/components/portfolio/ScrollToTop';
+import CursorMeteor from '@/components/ui/CursorMeteor';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen pb-24">
+      <CursorMeteor />
       <Header />
       <Hero />
       <About />
